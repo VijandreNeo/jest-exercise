@@ -1,6 +1,10 @@
-export default function fizzbuzz(number) {
+export default function fizzbuzz(number, ...args) {
   if (number < 0) {
-    throw new RangeError('Number must be positive')
+    throw new Error('Number must be positive')
+  }
+
+  if (args > 0) {
+    throw new Error('Function only accepts 1 number argument')
   }
 
   let returnVal = ''
@@ -15,5 +19,3 @@ export default function fizzbuzz(number) {
 
   return returnVal
 }
-
-console.log(fizzbuzz(10))
