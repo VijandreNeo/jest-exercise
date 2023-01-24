@@ -39,7 +39,8 @@ describe('testing fizzbuzz function', () => {
     expect(() => fizzbuzz(0.1)).toThrow()
   })
 
-  test('passing string as value', () => {
+  test('passing non-integer value', () => {
     expect(() => fizzbuzz('hello')).toThrow()
+    expect(() => fizzbuzz(NaN)).toThrow()
   })
 })
