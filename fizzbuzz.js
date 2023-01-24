@@ -3,7 +3,7 @@ export default function fizzbuzz(number, ...args) {
     throw new Error('Integer must be positive')
   }
 
-  if (args > 0) {
+  if (args.length > 0) {
     throw new Error('Function only accepts 1 number argument')
   }
 
