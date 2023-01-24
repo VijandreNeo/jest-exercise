@@ -1,6 +1,6 @@
 export default function fizzbuzz(number, ...args) {
-  if (number < 0) {
-    throw new Error('Number must be positive')
+  if (!Number.isInteger(number) || number < 0) {
+    throw new Error('Integer must be positive')
   }
 
   if (args > 0) {

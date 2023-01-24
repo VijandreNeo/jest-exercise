@@ -1,4 +1,5 @@
 import { describe, test, expect } from '@jest/globals'
+
 import fizzbuzz from '../fizzbuzz.js'
 
 describe('testing fizzbuzz function', () => {
@@ -32,5 +33,13 @@ describe('testing fizzbuzz function', () => {
 
   test('passing multiple arguments', () => {
     expect(() => fizzbuzz(3, 5)).toThrow()
+  })
+
+  test('passing a decimal value', () => {
+    expect(() => fizzbuzz(0.1)).toThrow()
+  })
+
+  test('passing string as value', () => {
+    expect(() => fizzbuzz('hello')).toThrow()
   })
 })
